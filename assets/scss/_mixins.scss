@@ -1,5 +1,5 @@
 
-@mixin button ($bg-color, $text-color, $padding, $font-size, $border-radius) {
+@mixin btn ($bg-color, $text-color, $padding, $font-size, $border-radius) {
   display: inline-flex;
   justify-content: center;
   align-items: center;

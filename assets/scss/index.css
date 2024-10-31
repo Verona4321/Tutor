@@ -72,7 +72,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -481,7 +482,6 @@ header .header__button:hover {
 .button:hover {
   background-position: right center;
   background-size: 200% auto;
-  -webkit-animation: pulse 2s infinite;
   animation: pulse512 1.5s infinite;
 }
 @keyframes pulse512 {
@@ -532,6 +532,4 @@ h1 {
 }
 .training-first__benefits .training-first__benefits > button {
   margin-left: 1em;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
