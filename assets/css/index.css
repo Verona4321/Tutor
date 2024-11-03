@@ -443,7 +443,7 @@ a {
 .blurred-circle-blue {
   width: 600px;
   height: 600px;
-  background-color: rgb(65, 45, 131);
+  background-color: #0042F8;
   position: absolute;
   border-radius: 50%;
   top: 20%;
@@ -473,6 +473,9 @@ a {
   column-gap: 2rem;
   grid-column: 1/2;
   grid-row: 2/3;
+}
+.training__container .trainig-cards .trainig-card {
+  border: 2px solid black;
 }
 .training__container .trainig-cards .trainig-card:nth-child(1) {
   grid-area: 1/1/2/2;
@@ -518,13 +521,17 @@ a {
   width: max-content;
   grid-column: 1/2;
   grid-row: 3/4;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem 2rem;
-  background-color: #C6368B;
-  background-size: 100% auto;
-  border-radius: 0.5rem;
+  padding: 10px 20px;
+  background-color: rgb(198, 54, 139);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: background-position 0.3s ease, box-shadow 0.3s ease;
 }
 .training__container .training__btn:hover {
   background-position: right center;
@@ -534,7 +541,7 @@ a {
 }
 @keyframes pulse512 {
   0% {
-    box-shadow: 0 0 0 0 #C6368B;
+    box-shadow: 0 0 0 0 rgb(198, 54, 139);
   }
   70% {
     box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
@@ -595,6 +602,7 @@ a {
   }
   .training-figure-green {
     top: 8%;
+    right: 0;
   }
   .training-figure-greenSmall {
     top: 35%;
@@ -647,8 +655,7 @@ a {
     left: -8%;
   }
   .training-figure-green {
-    top: 2%;
-    right: 3%;
+    display: none;
   }
   .training-figure-greenSmall {
     display: none;
@@ -660,14 +667,13 @@ a {
     filter: blur(100px);
   }
   .blurred-circle-yellow {
-    top: 15%;
-    left: -35%;
+    display: none;
   }
   .blurred-circle-blue {
     display: none;
   }
   .training__container .section__title {
-    font-size: 64px;
+    font-size: 48px;
   }
   .training__container .trainig-cards {
     grid-template-columns: 1fr;
@@ -699,18 +705,10 @@ a {
     left: -35%;
   }
   .training-figure-green {
-    top: 2%;
-    right: -35%;
-  }
-  .training-figure-greenSmall {
-    display: none;
-  }
-  .blurred-circle-yellow,
-  .blurred-circle-blue {
     display: none;
   }
   .training__container .section__title {
-    font-size: 24px;
+    font-size: 36px;
   }
   .training__container .trainig-cards {
     margin-bottom: 0;

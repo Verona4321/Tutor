@@ -1,5 +1,6 @@
 //Здесь файл стилей для главной страницы
 //переменные из файла _vars.scss используем через $
+@import './mixins';
 
 *{
   box-sizing: border-box;
@@ -137,7 +138,7 @@
       width: max-content;
       grid-column: 1 / 2;
       grid-row: 3 / 4;
-      @include button(#C6368B, #fff, 1.2rem 2rem, 2rem, .5rem);
+      @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
       &_content{
         font-size: 1rem;
         font-weight: 500;
