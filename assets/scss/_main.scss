@@ -10,356 +10,183 @@
 
 
 // <!--Форматы обучения--> //
-#training .section{
-  position: relative;
-  padding: 3rem;
-}
-
-.training-figure-blue,
-.training-figure-green,
-.training-figure-greenSmall,
-.blurred-circle-yellow,
-.blurred-circle-blue {
-  position: absolute;
-  z-index: -1;
-}
-
-.training-figure-blue{
-	top: 45%;
-	left: -7%;
-	transform: rotate(45deg);
-}
-
-.training-figure-green{
-	top: 8%;
-	right: 15%;
-	transform: rotate(45deg);
-}
-
-.training-figure-greenSmall{
-	top: 35%;
-	right: 60%;
-	transform: rotate(60deg);
-}
-
-.blurred-circle-yellow{
-	width: 600px;
-	height: 600px;
-	background-color: #FFF567;
-	position: absolute;
-	border-radius: 50%;
-	top: 20%;
-	left: -42%;
-	filter: blur(200px); 
-	z-index: -1; 
-}
-
-.blurred-circle-blue{
-	width: 600px;
-	height: 600px;
-	background-color: #0042F8;
-	position: absolute;
-	border-radius: 50%; 
-	top: 20%;
-	right: -42%;
-	filter: blur(200px); 
-	z-index: -1; 
-}
-
 .training__container{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  align-items: start;
-  
+  margin-bottom: 100px;
   .section__title {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-		width: 65%;
-    font-size: 72px;
-    font-weight: 700;
-    color: rgb(55, 46, 127);
-    margin-bottom: 2rem;
+		width: 33%;
+    font-size: 40px;
+    font-weight: $weight-bold;
+    line-height: 150%;
+    color: $color-violet;
+    margin-bottom: 60px;
   }
 
   .trainig-cards {
     display: grid;
-    grid-template-columns: 20% 20% 60%;
-    column-gap: 2rem;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+
     .trainig-card {
-      border: 2px solid black;
-      &:nth-child(1) {
-          grid-area: 1/1/2/2;
-      }
-      &:nth-child(2) {
-          grid-area: 2/1/3/2;
-      }
-      &:nth-child(3) {
-        grid-area: 2/2/3/3;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 30px;
+      border: 1px solid #C6C6C6;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
 
       &__name{
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: rgb(55, 46, 127);
-        margin-bottom: 1.5rem;
+        font-size: 30px;
+        font-weight: $weight-medium;
+        color: $color-violet;
         }
 
         &__item{
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          gap: .9rem;
-          font-size: 1rem;
-          font-weight: 500;
-          color: #343434;
+          font-size: 24px;
+          font-weight: $weight-regular;
+          line-height: 120%;
+          color: $color-black;
+
           .training-check{
-            width: .8rem;
-            color: rgba(198, 54, 139, 1);
+            width: 25px;
+            color: $color-pink;
+            margin-right: 20px;
           }
           .training-descr{
-            line-height: 1.8rem;
+            line-height: 120%;
           }
         }
       }
-			.training__image{
-				grid-column: 3 / 3;
-				grid-row: 1 / 3;
-				justify-self: center;
-				&_picture{
-					width: 100%;
-					z-index: -1;
-				}
-		}
   }
+
   .training__btn{
-      width: max-content;
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
       @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
       &_content{
-        font-size: 1rem;
-        font-weight: 500;
+        font-size: 24px;
+        font-weight: $weight-medium;
         text-decoration: none;
         color: #fff;
       }
   }
 }
-// МЕДИА-ЗАПРОСЫ ДЛЯ СТИЛЕЙ
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 900px;
-  }
 
-  .training-figure-blue {
-    top: 58%;
-    left: -10%;
-  }
 
-  .training-figure-green {
-    top: 8%;
-    right: 0;
-  }
-
-  .training-figure-greenSmall {
-    top: 40%;
-    right: 50%;
-  }
-
-  .blurred-circle-yellow,
-  .blurred-circle-blue {
-    width: 500px;
-    height: 500px;
-		z-index: -1;
-  }
-
-  .blurred-circle-yellow {
-    top: 10%;
-    left: -50%;
-  }
-
-  .blurred-circle-blue {
-		position: absolute;
-    top: 50%;
-    right: -50%;
-  }
-
-	.training__container{
-		.section__title{
-			width: 100%;
-		}
-	}
-}
-
-@media screen and (max-width: 991px) {
-  .container {
-    max-width: 700px;
-  }
-
-  .training-figure-blue {
-    top: 50%;
-    left: -10%;
-  }
-
-  .training-figure-green {
-    top: 8%;
-    right: 0;
-  }
-
-  .training-figure-greenSmall {
-    top: 35%;
-    right: 52%;
-  }
-
-  .blurred-circle-yellow,
-  .blurred-circle-blue {
-    width: 400px;
-    height: 400px;
-  }
-
-  .blurred-circle-yellow {
-    top: 10%;
-    left: -50%;
-  }
-
-  .blurred-circle-blue {
-		position: absolute;
-    top: 50%;
-    right: -50%;
-  }
-
-  .training__container {
-    .section__title {
-      width: 100%;
-      font-size: 48px;
+// <!--Как проходит обучение--> //
+.learning-process{
+  .learning-process__container{
+    .section__title{
+      font-size: 40px;
+      font-weight: $weight-bold;
+      line-height: 150%;
+      color: $color-violet;
+      text-align: center;
+      margin-bottom: 60px;
     }
-
-    .trainig-cards {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-
-      .trainig-card {
-        &:nth-child(1) {
-          grid-area: 1/1/2/2;
-        }
-        &:nth-child(2) {
-          grid-area: 1/2/2/3;
-        }
-        &:nth-child(3) {
-          grid-area: 2/1/3/2;
-        }
-      }
-
-      .training__image {
-        grid-column: 1 / 3;
-        grid-row: 2 / 4;
-        justify-self: end;
-				width: 45%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 500px;
-  }
-
-  .training-figure-blue {
-    top: 45%;
-    left: -8%;
-  }
-
-  .training-figure-green {
-    display: none;
-  }
-
-  .training-figure-greenSmall {
-    display: none;
-  }
-
-  .blurred-circle-yellow,
-  .blurred-circle-blue {
-    width: 300px;
-    height: 300px;
-		filter: blur(100px); 
-  }
-
-  .blurred-circle-yellow {
-    display: none;
-  }
-
-  .blurred-circle-blue {
-		display: none;
-	}
-
-  .training__container {
-    .section__title {
-      font-size: 48px;
-    }
-
-    .trainig-cards {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-			margin-bottom: 2rem;
-
-      .trainig-card {
-        &:nth-child(1) {
-          grid-area: 1/1/2/2;
-        }
-        &:nth-child(2) {
-          grid-area: 2/1/3/2;
-        }
-        &:nth-child(3) {
-          grid-area: 3/1/4/2;
-        }
-      }
-
-      .training__image {
-				display: none;
-      }
-    }
-
-    .training__btn {
+  
+    .lerning-process__content{
+      display: flex;
+      flex-direction: row;
       justify-content: center;
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 300px;
-  }
-
-  .training-figure-blue {
-    top: 50%;
-    left: -35%;
-  }
-
-  .training-figure-green {
-    display: none;
-  }
-
-  .training__container {
-    .section__title {
-      font-size: 36px;
-    }
-
-    .trainig-cards {
-			margin-bottom: 0;
-      .trainig-card {
-				margin-bottom: 1rem;
-        &__name {
-          font-size: 1.2rem;
-					margin-bottom: .5rem;
+      align-items: center;
+      gap: 120px;
+      margin-bottom: 40px;
+  
+      &_picture{
+        width: 100%;
+      }
+  
+      &_wrapp{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+  
+        .learning-name{
+          font-size: 30px;
+          font-weight: $weight-medium;
+          color: $color-violet;
+          margin-bottom: 32px;
         }
-
-        &__item {
-          font-size: .9rem;
+  
+        .learning-description{
+          font-size: 24px;
+          font-weight: $weight-regular;
+          line-height: 150%;
+          color: $color-black;
+          margin-bottom: 60px;
+        }
+  
+        .learning-btn{
+          @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+          &_content{
+            font-size: 24px;
+            font-weight: $weight-medium;
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
     }
+  
+    .learning-process__experience{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      gap: 80px;
+      background: linear-gradient(to right, $color-violet, $color-pink);
+      border-radius: 16px;
+  
+      .learning-experience__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px;
+  
+        &_text{
+          width: 90%;
+          font-size: 30px;
+          font-weight: $weight-light;
+          line-height: 150%;
+          color: $color-white;
+        }
+        &_wrapp{
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+  
+          .learning-btn__dark{
+            @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+            &_content{
+              font-size: 24px;
+              font-weight: $weight-medium;
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+  
+          .learning-btn__light{
+            @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+            &_content{
+              font-size: 24px;
+              font-weight: $weight-medium;
+              text-decoration: none;
+              color: $color-violet;
+            }
+          }
+        }
+      }
+    }
+  
   }
 }
+
+
+
