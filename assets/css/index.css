@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -456,15 +457,15 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: rgb(255, 255, 255);
   transition: background-position 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(255, 255, 255);
 }
 .training__container .training__btn:hover {
   background-position: right center;
   background-size: 200% auto;
   animation: pulse512 1.5s infinite;
 }
-@keyframes pulse512 {
+@keyframes pulse512-dark {
   0% {
     box-shadow: 0 0 0 0 rgb(198, 54, 139);
   }
@@ -474,6 +475,9 @@ a {
   100% {
     box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
   }
+}
+.training__container .training__btn:hover {
+  animation-name: pulse512-dark;
 }
 .training__container .training__btn_content {
   font-size: 24px;
@@ -497,6 +501,9 @@ a {
   align-items: center;
   gap: 120px;
   margin-bottom: 40px;
+}
+.learning-process .learning-process__container .lerning-process__content.hidden {
+  display: none;
 }
 .learning-process .learning-process__container .lerning-process__content_picture {
   width: 100%;
@@ -530,15 +537,15 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: rgb(255, 255, 255);
   transition: background-position 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(255, 255, 255);
 }
 .learning-process .learning-process__container .lerning-process__content_wrapp .learning-btn:hover {
   background-position: right center;
   background-size: 200% auto;
   animation: pulse512 1.5s infinite;
 }
-@keyframes pulse512 {
+@keyframes pulse512-dark {
   0% {
     box-shadow: 0 0 0 0 rgb(198, 54, 139);
   }
@@ -548,6 +555,9 @@ a {
   100% {
     box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
   }
+}
+.learning-process .learning-process__container .lerning-process__content_wrapp .learning-btn:hover {
+  animation-name: pulse512-dark;
 }
 .learning-process .learning-process__container .lerning-process__content_wrapp .learning-btn_content {
   font-size: 24px;
@@ -561,7 +571,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  gap: 80px;
+  gap: 100px;
   background: linear-gradient(to right, rgb(55, 46, 127), rgb(198, 54, 139));
   border-radius: 16px;
 }
@@ -573,7 +583,7 @@ a {
   gap: 60px;
 }
 .learning-process .learning-process__container .learning-process__experience .learning-experience__info_text {
-  width: 90%;
+  width: 85%;
   font-size: 30px;
   font-weight: 300;
   line-height: 150%;
@@ -594,15 +604,15 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: rgb(255, 255, 255);
   transition: background-position 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(255, 255, 255);
 }
 .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__dark:hover {
   background-position: right center;
   background-size: 200% auto;
   animation: pulse512 1.5s infinite;
 }
-@keyframes pulse512 {
+@keyframes pulse512-dark {
   0% {
     box-shadow: 0 0 0 0 rgb(198, 54, 139);
   }
@@ -613,33 +623,36 @@ a {
     box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
   }
 }
+.learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__dark:hover {
+  animation-name: pulse512-dark;
+}
 .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__dark_content {
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgb(198, 54, 139);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: rgb(255, 255, 255);
   transition: background-position 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(55, 46, 127);
 }
 .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light:hover {
   background-position: right center;
   background-size: 200% auto;
   animation: pulse512 1.5s infinite;
 }
-@keyframes pulse512 {
+@keyframes pulse512-light {
   0% {
-    box-shadow: 0 0 0 0 rgb(198, 54, 139);
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
   }
   70% {
     box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
@@ -648,9 +661,209 @@ a {
     box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
   }
 }
+.learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light:hover {
+  animation-name: pulse512-light;
+}
 .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light_content {
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
   color: rgb(55, 46, 127);
+}
+
+/* 1439px - 768px */
+@media (max-width: 1439px) and (min-width: 768px) {
+  .training__container .section__title {
+    width: 50%;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .training__container .trainig-cards {
+    gap: 15px;
+  }
+  .training__container .trainig-cards .trainig-card {
+    padding: 20px;
+  }
+  .training__container .trainig-cards .trainig-card__name {
+    font-size: 26px;
+  }
+  .training__container .trainig-cards .trainig-card__item {
+    font-size: 20px;
+  }
+  .training__container .trainig-cards .trainig-card__item .training-check {
+    width: 20px;
+    margin-right: 15px;
+  }
+  .training__container .training__btn_content {
+    font-size: 20px;
+  }
+  .learning-process .learning-process__container .section__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  .learning-process .learning-process__container .lerning-process__content {
+    gap: 60px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-name {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-description {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-btn_content {
+    font-size: 20px;
+  }
+  .learning-process .learning-process__container .learning-process__experience {
+    padding: 20px;
+    gap: 50px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info {
+    gap: 40px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_text {
+    font-size: 26px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__dark_content,
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light_content {
+    font-size: 20px;
+  }
+}
+/* 767px - 412px */
+@media (max-width: 767px) and (min-width: 412px) {
+  .training__container .section__title {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .training__container .trainig-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .training__container .trainig-cards .trainig-card {
+    padding: 15px;
+  }
+  .training__container .trainig-cards .trainig-card__name {
+    font-size: 24px;
+  }
+  .training__container .trainig-cards .trainig-card__item {
+    font-size: 18px;
+  }
+  .training__container .trainig-cards .trainig-card__item .training-check {
+    width: 18px;
+    margin-right: 10px;
+  }
+  .training__container .training__btn_content {
+    font-size: 18px;
+  }
+  .learning-process .learning-process__container .section__title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .learning-process .learning-process__container .lerning-process__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-btn_content {
+    font-size: 18px;
+  }
+  .learning-process .learning-process__container .learning-process__experience {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 30px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info {
+    align-items: center;
+    gap: 30px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_text {
+    font-size: 18px;
+    text-align: center;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__dark_content,
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light_content {
+    font-size: 18px;
+  }
+}
+/* 411px и меньше */
+@media (max-width: 411px) {
+  .training__container .section__title {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .training__container .trainig-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .training__container .trainig-cards .trainig-card {
+    padding: 10px;
+  }
+  .training__container .trainig-cards .trainig-card__name {
+    font-size: 22px;
+  }
+  .training__container .trainig-cards .trainig-card__item {
+    font-size: 16px;
+  }
+  .training__container .trainig-cards .trainig-card__item .training-check {
+    width: 16px;
+    margin-right: 8px;
+  }
+  .training__container .training__btn_content {
+    font-size: 16px;
+  }
+  .learning-process .learning-process__container .section__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .learning-process .learning-process__container .lerning-process__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-name {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .learning-process .learning-process__container .lerning-process__content_wrapp .learning-btn_content {
+    font-size: 16px;
+  }
+  .learning-process .learning-process__container .learning-process__experience {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info {
+    gap: 20px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_text {
+    font-size: 16px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__dark_content,
+  .learning-process .learning-process__container .learning-process__experience .learning-experience__info_wrapp .learning-btn__light_content {
+    font-size: 16px;
+  }
 }

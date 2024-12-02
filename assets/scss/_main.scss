@@ -57,6 +57,7 @@
             color: $color-pink;
             margin-right: 20px;
           }
+
           .training-descr{
             line-height: 120%;
           }
@@ -65,16 +66,16 @@
   }
 
   .training__btn{
-      @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+      @include button-dark($color-pink, $color-white, $color-pink);
       &_content{
         font-size: 24px;
         font-weight: $weight-medium;
         text-decoration: none;
         color: #fff;
+
       }
   }
 }
-
 
 // <!--Как проходит обучение--> //
 .learning-process{
@@ -95,6 +96,10 @@
       align-items: center;
       gap: 120px;
       margin-bottom: 40px;
+
+      &.hidden {
+        display: none;
+      }
   
       &_picture{
         width: 100%;
@@ -122,7 +127,7 @@
         }
   
         .learning-btn{
-          @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+          @include button-dark($color-pink, $color-white, $color-pink);
           &_content{
             font-size: 24px;
             font-weight: $weight-medium;
@@ -139,7 +144,7 @@
       justify-content: center;
       align-items: center;
       padding: 30px;
-      gap: 80px;
+      gap: 100px;
       background: linear-gradient(to right, $color-violet, $color-pink);
       border-radius: 16px;
   
@@ -151,7 +156,7 @@
         gap: 60px;
   
         &_text{
-          width: 90%;
+          width: 85%;
           font-size: 30px;
           font-weight: $weight-light;
           line-height: 150%;
@@ -163,17 +168,17 @@
           gap: 20px;
   
           .learning-btn__dark{
-            @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+            @include button-dark($color-pink, $color-white, $color-pink);
             &_content{
               font-size: 24px;
               font-weight: $weight-medium;
               text-decoration: none;
-              color: #fff;
+              color: $color-white;
             }
           }
   
           .learning-btn__light{
-            @include button($color-pink, $color-white, 10px 20px, 1rem, 5px);
+            @include button-light($color-white, $color-violet, $color-white);
             &_content{
               font-size: 24px;
               font-weight: $weight-medium;
@@ -184,9 +189,277 @@
         }
       }
     }
-  
   }
 }
 
+/* 1439px - 768px */
+@media (max-width: 1439px) and (min-width: 768px) {
+  .training__container {
+    .section__title {
+      width: 50%;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
 
+    .trainig-cards {
+      gap: 15px;
 
+      .trainig-card {
+        padding: 20px;
+
+        &__name {
+          font-size: 26px;
+        }
+
+        &__item {
+          font-size: 20px;
+
+          .training-check {
+            width: 20px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
+    .training__btn_content {
+      font-size: 20px;
+    }
+  }
+
+  .learning-process {
+    .learning-process__container {
+      .section__title {
+        font-size: 36px;
+        margin-bottom: 50px;
+      }
+  
+      .lerning-process__content {
+        gap: 60px;
+  
+        &_wrapp {
+          .learning-name {
+            font-size: 26px;
+            margin-bottom: 24px;
+          }
+  
+          .learning-description {
+            font-size: 20px;
+            margin-bottom: 40px;
+          }
+  
+          .learning-btn_content {
+            font-size: 20px;
+          }
+        }
+      }
+  
+      .learning-process__experience {
+        padding: 20px;
+        gap: 50px;
+  
+        .learning-experience__info {
+          gap: 40px;
+  
+          &_text {
+            font-size: 26px;
+          }
+  
+          &_wrapp {
+            .learning-btn__dark_content,
+            .learning-btn__light_content {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 767px - 412px */
+@media (max-width: 767px) and (min-width: 412px) {
+  .training__container {
+    .section__title {
+      width: 100%;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .trainig-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      .trainig-card {
+        padding: 15px;
+
+        &__name {
+          font-size: 24px;
+        }
+
+        &__item {
+          font-size: 18px;
+
+          .training-check {
+            width: 18px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .training__btn_content {
+      font-size: 18px;
+    }
+  }
+
+  .learning-process {
+    .learning-process__container {
+      .section__title {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+  
+        .lerning-process__content {
+          flex-direction: column;
+          gap: 30px;
+ 
+        &_wrapp {
+          .learning-name {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+  
+          .learning-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+          }
+  
+          .learning-btn_content {
+            font-size: 18px;
+          }
+        }
+      }
+  
+      .learning-process__experience {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 30px;
+  
+        .learning-experience__info {
+          align-items: center;
+          gap: 30px;
+  
+          &_text {
+            font-size: 18px;
+            text-align: center;
+          }
+  
+          &_wrapp {
+            flex-direction: column;
+            gap: 15px;
+  
+            .learning-btn__dark_content,
+            .learning-btn__light_content {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 411px и меньше */
+@media (max-width: 411px) {
+  .training__container {
+    .section__title {
+      width: 100%;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .trainig-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      .trainig-card {
+        padding: 10px;
+
+        &__name {
+          font-size: 22px;
+        }
+
+        &__item {
+          font-size: 16px;
+
+          .training-check {
+            width: 16px;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    .training__btn_content {
+      font-size: 16px;
+    }
+  }
+
+  .learning-process {
+    .learning-process__container {
+      .section__title {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+  
+      .lerning-process__content {
+        flex-direction: column;
+        gap: 20px;
+  
+        &_wrapp {
+          .learning-name {
+            font-size: 22px;
+            margin-bottom: 15px;
+          }
+  
+          .learning-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+  
+          .learning-btn_content {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .learning-process__experience {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+  
+        .learning-experience__info {
+          gap: 20px;
+  
+          &_text {
+            font-size: 16px;
+          }
+  
+          &_wrapp {
+            flex-direction: column;
+            gap: 10px;
+  
+            .learning-btn__dark_content,
+            .learning-btn__light_content {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
