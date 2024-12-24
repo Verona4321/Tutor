@@ -1,34 +1,193 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <title>Подготовка к ЕГЭ и ОГЭ</title>
-  </head>
-  <body>
-    <!-- все разделы вставляем в обёртку с классом container -->
-    <header>
-      <div class="container">VEROMATIKA</div>
-    </header>
 
-    <main>
-      <!-- блоки отделяем друг от друга строкой -->
-      <section><!--Подготовка к ЕГЭ...--></section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <title>Подготовка к ЕГЭ и ОГЭ</title>
+</head>
 
-      <section><!--Готовлю к экзаменам...--></section>
+<body>
+  <!-- все разделы вставляем в обёртку с классом container -->
+  <header>
+    <div class="container">VEROMATIKA</div>
+  </header>
 
-      <section><!--О преподавателе--></section>
+  <main>
+    <!-- блоки отделяем друг от друга строкой -->
+    <section><!--Подготовка к ЕГЭ...--></section>
 
-      <section><!--Форматы обучения--></section>
+    <section><!--Готовлю к экзаменам...--></section>
 
-      <section><!--Как проходит обучение--></section>
+    <section><!--О преподавателе--></section>
+    <!--Форматы обучения-->
+    <section class="trainig section curve" id="trainig">
 
-      <section><!--Почему родители рекомендуют--></section>
+      <div class="training__container container">
+        <h2 class="section__title">Форматы обучения на моих занятиях</h2>
 
-      <section><!--Кейсы и отзывы--></section>
-    </main>
+        <div class="trainig-cards">
+          <ul class="trainig-card">
+            <h4 class="trainig-card__name">Подготовка к ЕГЭ и ОГЭ 2024</h4>
 
-    <footer></footer>
-  </body>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Занятия индивидуально</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Занятия в парах и минигруппах до 5 человек</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Занятия на курсе в формате вебинаров</p>
+            </li>
+          </ul>
+
+          <ul class="trainig-card">
+            <h4 class="trainig-card__name">Повышаю школьную успеваемость</h4>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Формирую базу знаний</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Устраняю пробелы</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Повышаю интерес к предмету</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Помогаю повысить школьную оценку на 1,7 балла</p>
+            </li>
+          </ul>
+
+          <ul class="trainig-card">
+            <h4 class="trainig-card__name">Олимпиадная<br> математика</h4>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Разбираем приёмы решения олимпиадных задач</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Разбираем все олимпиадные задачи прошлых лет</p>
+            </li>
+            <li class="trainig-card__item">
+              <img src="assets/icons/checkFatFill.svg" class="training-check">
+              <p class="training-descr">Развиваем нестандартное мышление</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="training__btn">
+          <a href="№" class="training__btn_content">Попробовать сейчас</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!--Как проходит обучение-->
+    <section class="learning-process section curve" id="learning-process">
+
+      <div class="learning-process__container container">
+        <h2 class="section__title">Как проходит обучение</h2>
+
+        <div class="lerning-process__content" id="first-content">
+          <img src="assets/images/howWorkPicture.svg" alt="Man in front of a board with graphics"
+            class="lerning-process__content_picture">
+
+          <div class="lerning-process__content_wrapp">
+            <h4 class="learning-name">Бесплатная диагностика знаний</h4>
+
+            <p class="learning-description">Первое диагностическое занятие - бесплатно. На нём мы поймём ваш
+              уровень знаний, и я составлю для вас индивидуальный план подготовки и рекомендации, как
+              лучше готовиться к экзамену</p>
+
+            <div class="learning-btn">
+              <a href="№" class="learning-btn_content">Попробовать сейчас</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lerning-process__content">
+          <div class="lerning-process__content_wrapp">
+            <h4 class="learning-name">Подготовка в полном формате эгзамена</h4>
+
+            <p class="learning-description">Современная педадогическая технология позволяет учить дома, а на занятии
+              отрабатывать весь теоретический материал на практике. Без воды. Только реальный экзамен.</p>
+
+            <div class="learning-btn">
+              <a href="№" class="learning-btn_content">Попробовать сейчас</a>
+            </div>
+          </div>
+
+          <img src="assets/images/howWorkPicture2.svg" alt="Girl with computer and diagram"
+            class="lerning-process__content_picture">
+        </div>
+
+        <div class="lerning-process__content">
+          <img src="assets/images/howWorkPicture3.svg" alt="Man in front of a board with graphics"
+            class="lerning-process__content_picture">
+
+          <div class="lerning-process__content_wrapp">
+            <h4 class="learning-name">Обучение онлайн</h4>
+
+            <p class="learning-description">Я обладаю всеми современными методиками проведения онлайн-занятий: использую
+              онлайн-доску, графическмй планшет, хорошую камеру и микрофон</p>
+
+            <div class="learning-btn">
+              <a href="№" class="learning-btn_content">Попробовать сейчас</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lerning-process__content">
+          <div class="lerning-process__content_wrapp">
+            <h4 class="learning-name">Моральная поддержка учеников</h4>
+
+            <p class="learning-description">Экзамены - очень стрессовая вещь для ребят. Я стараюсь поддерживать их в
+              трудную минуту и мотивировать в подготовке.</p>
+
+            <div class="learning-btn">
+              <a href="№" class="learning-btn_content">Попробовать сейчас</a>
+            </div>
+          </div>
+
+          <img src="assets/images/howWorkPicture4.svg" alt="Girl with computer and diagram"
+            class="lerning-process__content_picture">
+        </div>
+
+        <div class="learning-process__experience">
+          <img src="assets/images/experienceBlock.svg" alt="" class="learning-process__experience_picture">
+
+          <div class="learning-experience__info">
+            <p class="learning-experience__info_text">Я создавала собственные программы подготовки на протяжении 14 лет
+              и знаю, что точно нужно для экзамена</p>
+
+            <div class="learning-experience__info_wrapp">
+              <div class="learning-btn__dark">
+                <a href="№" class="learning-btn__dark_content">Попробовать сейчас</a>
+              </div>
+
+              <div class="learning-btn__light">
+                <a href="№" class="learning-btn__light_content">Написать в WhatsApp </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section><!--Почему родители рекомендуют--></section>
+
+    <section><!--Кейсы и отзывы--></section>
+  </main>
+
+  <footer></footer>
+
+</body>
+
 </html>
