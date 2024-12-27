@@ -1,8 +1,9 @@
 //Здесь файл стилей для главной страницы
 //переменные из файла _vars.scss используем через $
+@import './mixins';
 
 
-@mixin btn ($bg-color, $text-color, $padding, $font-size, $border-radius, $margin-top) {
+/*@mixin btn ($bg-color, $text-color, $padding, $font-size, $border-radius, $margin-top) {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +38,7 @@
     }
   }
 }
-
+*/
 
 header {
   display: flex;
@@ -109,7 +110,7 @@ header {
 
 .button {
   //width: 200px;
-  @include btn (#C6368B, #fff, 20px, $text-base, 4px, 20px);
+  @include btn (#C6368B, #fff, 20px, $text-base, 4px);
 }
 
 h1 {
