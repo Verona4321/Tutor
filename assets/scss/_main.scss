@@ -6,3 +6,56 @@ header {
   font-size: $text-5xl;
   color: $color-pink;
 }
+
+// <!--Готовлю к экзаменам...-->
+
+.preparation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .preparation-left{
+    width: 50%;
+    .preparation-left__title{
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $color-violet;
+      .preparation__title--bold{
+        color: $color-pink;
+      }
+    }
+  }
+    .preparation-right{
+      width: 50%;
+      .preparation-right__text{
+        width: 65%;
+        margin: 0;
+        font-size: 16px;
+        line-height: 150%;
+        color: $color-violet;
+        .preparation__text--bold{
+          font-weight: 700;
+        }
+      }
+      &__experience{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &_wrapp{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 0;
+        }
+      }
+      .preparation-right__list{
+        width: 50%;
+        list-style-type: none;
+      }
+      .preparation-right__list_span{
+        font-weight: 700;
+        font-size: 3.6rem;
+        -webkit-text-stroke: 2px $color-pink;
+        color: transparent;
+      }
+    }
+}
