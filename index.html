@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/index.css" />
+  <meta cases__info_name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Подготовка к ЕГЭ и ОГЭ</title>
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -18,9 +20,49 @@
     <!-- блоки отделяем друг от друга строкой -->
     <section><!--Подготовка к ЕГЭ...--></section>
 
-    <section><!--Готовлю к экзаменам...--></section>
+    <!--Готовлю к экзаменам...-->
+    <section class="preporation-section section" id="preporation">
+      <div class="preparation__container container">
+        <div class="preparation-left">
+          <h2 class="preparation-left__title">Готовлю к экзаменам <span class="preparation__title--bold">с 2010
+              года</span></h2>
+          <img src="assets/images/centreBlock.svg" alt="#" class="preparation-left__picture">
+        </div>
+
+        <div class="preparation-right">
+          <p class="preparation-right__text">Меня зовут <span class="preparation__text--bold">Вероника
+              Александровна</span>, и моё призвание - работать со школьниками и
+            помогать им достигать своих целей, что я успешно делаю на протяжении уже 14 лет</p>
+
+          <div class="preparation-right__experience">
+            <ul class="preparation-right__experience_wrapp">
+              <li class="preparation-right__list">
+                <span class="preparation-right__list_span">14</span>
+                <p class="preparation-right__list_text">лет опыта</p>
+              </li>
+              <li class="preparation-right__list">
+                <span class="preparation-right__list_span">+20</span>
+                <p class="preparation-right__list_text">баллов к вашему результату</p>
+              </li>
+              <li class="preparation-right__list">
+                <span class="preparation-right__list_span">80%</span>
+                <p class="preparation-right__list_text">учеников поступают в вуз на бюджет</p>
+              </li>
+              <li class="preparation-right__list">
+                <span class="preparation-right__list_span">1000</span>
+                <p class="preparation-right__list_text">выпускников за все время работы</p>
+              </li>
+            </ul>
+            <div class="preparation-right__btn">
+              <a href="#" class="preparation-right__btn_content">Записаться на диагностику</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section><!--О преподавателе--></section>
+
     <!--Форматы обучения-->
     <section class="trainig section curve" id="trainig">
 
@@ -183,10 +225,151 @@
 
     <section><!--Почему родители рекомендуют--></section>
 
-    <section><!--Кейсы и отзывы--></section>
+    <!--Кейсы и отзывы-->
+    <section class="cases section" id="cases">
+      <div class="cases__container container">
+
+        <h2 class="cases__title">Кейсы учеников</h2>
+        <div class="swiper-slider">
+          <ul class="cases__wrapp swiper-wrapper">
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/koroszkina_nastia.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Корошкина Настя</h4>
+                <p class="cases__info_subject">ЭГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">50</span>баллов в тесте</p>
+                  <p class="point"><span class="point-span_green">82</span>балла на экзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/krasnova_ania.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Краснова Аня</h4>
+                <p class="cases__info_subject">ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">37</span>балла на тесте</p>
+                  <p class="point"><span class="point-span_green">78</span>балла на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/aristarchov_dmitrij.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Аристархов Дмитрий</h4>
+                <p class="cases__info_subject">ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">46</span>балла на тесте</p>
+                  <p class="point"><span class="point-span_green">84</span>балла на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/sinelnikov_denis.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Синельников Денис</h4>
+                <p class="cases__info_subject">ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">34</span>балла на тесте</p>
+                  <p class="point"><span class="point-span_green">82</span>балла на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/zacharowa_olga.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Захарова Ольга</h4>
+                <p class="cases__info_subject">ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">48</span>балла на тесте</p>
+                  <p class="point"><span class="point-span_green">90</span>балла на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/sazin_evgenij.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Сажин Евгений</h4>
+                <p class="cases__info_subject">ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">60</span>балла на тесте</p>
+                  <p class="point"><span class="point-span_green">96</span>балла на эгзамене</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slider">
+          <ul class="cases__wrapp swiper-wrapper">
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/morozova_marina.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Морозова Марина</h4>
+                <p class="cases__info_subject">ОГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">3</span>оценка на тесте</p>
+                  <p class="point"><span class="point-span_green">5</span>оценка на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/kuzmienko_alina.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Кузьменко Алина</h4>
+                <p class="cases__info_subject">ОГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">4</span>оценка на тесте</p>
+                  <p class="point"><span class="point-span_green">5</span>оценка на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/piczugin_matvej.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Пичугин Матвей</h4>
+                <p class="cases__info_subject">ОГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">3</span>оценка на тесте</p>
+                  <p class="point"><span class="point-span_green">5</span>оценка на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/sabirova_diana.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Сабирова Диана</h4>
+                <p class="cases__info_subject">База ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">3</span>оценка на тесте</p>
+                  <p class="point"><span class="point-span_green">5</span>оценка на эгзамене</p>
+                </div>
+              </div>
+            </li>
+            <li class="cases__list swiper-slide">
+              <img src="assets/images/melnikova_arina.png" alt="#" class="cases__photo">
+              <div class="cases__info">
+                <h4 class="cases__info_name">Мельникова Арина</h4>
+                <p class="cases__info_subject">База ЕГЭ</p>
+                <div class="cases__info_points">
+                  <p class="point"><span class="point-span_grey">2</span>оценка на тесте</p>
+                  <p class="point"><span class="point-span_green">4</span>оценка на эгзамене</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+    </section>
   </main>
 
   <footer></footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

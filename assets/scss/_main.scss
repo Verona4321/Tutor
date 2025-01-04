@@ -2,20 +2,90 @@
 //переменные из файла _vars.scss используем через $
 @import './mixins';
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+//пробный текст
+header {
+  font-size: $text-5xl;
+  color: $color-pink;
 }
 
-
+// <!--Готовлю к экзаменам...-->
+.preparation__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 100px;
+  .preparation-left{
+    .preparation-left__title{
+      width: 40%;
+      font-size: 2.5rem;
+      font-weight: $weight-medium;
+      color: $color-violet;
+      .preparation__title--bold{
+        color: $color-pink;
+      }
+    }
+  }
+    .preparation-right{
+      width: 50%;
+      .preparation-right__text{
+        width: 65%;
+        margin-bottom: 2.5rem;
+        font-size: 1rem;
+        line-height: 150%;
+        color: $color-violet;
+        .preparation__text--bold{
+          font-weight: 700;
+        }
+      }
+      &__experience{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        &_wrapp{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 3.75rem;
+        }
+      }
+      .preparation-right__list{
+        width: 50%;
+        list-style-type: none;
+        margin-bottom: 2rem;
+        &:nth-last-child(-n+2){
+          margin-bottom: 0;
+        }
+        &_span{
+          font-weight: 700;
+          font-size: 3.6rem;
+          -webkit-text-stroke: 2px $color-pink;
+          color: transparent;
+        }
+        &_text{
+          font-size: 1rem;
+          font-weight: $weight-regular;
+          line-height: 150%;
+          color: $color-violet;
+        }
+      }
+      &__btn{
+        @include button-dark($color-pink, $color-white, $color-pink);
+        &_content{
+          font-size: 1rem;
+          font-weight: $weight-medium;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+}
 // <!--Форматы обучения--> //
 .training__container{
   margin-bottom: 100px;
   .section__title {
 		width: 33%;
-    font-size: 40px;
-    font-weight: $weight-bold;
+    font-size: 2.5rem;
+    font-weight: $weight-medium;
     line-height: 150%;
     color: $color-violet;
     margin-bottom: 60px;
@@ -38,7 +108,7 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
 
       &__name{
-        font-size: 30px;
+        font-size: 1.875rem;
         font-weight: $weight-medium;
         color: $color-violet;
         }
@@ -47,7 +117,7 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          font-size: 24px;
+          font-size: 1rem;
           font-weight: $weight-regular;
           line-height: 120%;
           color: $color-black;
@@ -68,7 +138,7 @@
   .training__btn{
       @include button-dark($color-pink, $color-white, $color-pink);
       &_content{
-        font-size: 24px;
+        font-size: 1rem;
         font-weight: $weight-medium;
         text-decoration: none;
         color: #fff;
@@ -79,10 +149,11 @@
 
 // <!--Как проходит обучение--> //
 .learning-process{
+  margin-bottom: 100px;
   .learning-process__container{
     .section__title{
-      font-size: 40px;
-      font-weight: $weight-bold;
+      font-size: 2.5rem;
+      font-weight: $weight-medium;
       line-height: 150%;
       color: $color-violet;
       text-align: center;
@@ -112,14 +183,14 @@
         align-items: start;
   
         .learning-name{
-          font-size: 30px;
+          font-size: 1.875rem;
           font-weight: $weight-medium;
           color: $color-violet;
           margin-bottom: 32px;
         }
   
         .learning-description{
-          font-size: 24px;
+          font-size: 1rem;
           font-weight: $weight-regular;
           line-height: 150%;
           color: $color-black;
@@ -129,7 +200,7 @@
         .learning-btn{
           @include button-dark($color-pink, $color-white, $color-pink);
           &_content{
-            font-size: 24px;
+            font-size: 1rem;
             font-weight: $weight-medium;
             text-decoration: none;
             color: #fff;
@@ -157,7 +228,7 @@
   
         &_text{
           width: 85%;
-          font-size: 30px;
+          font-size: 1.5rem;
           font-weight: $weight-light;
           line-height: 150%;
           color: $color-white;
@@ -170,7 +241,7 @@
           .learning-btn__dark{
             @include button-dark($color-pink, $color-white, $color-pink);
             &_content{
-              font-size: 24px;
+              font-size: 1rem;
               font-weight: $weight-medium;
               text-decoration: none;
               color: $color-white;
@@ -180,7 +251,7 @@
           .learning-btn__light{
             @include button-light($color-white, $color-violet, $color-white);
             &_content{
-              font-size: 24px;
+              font-size: 1rem;
               font-weight: $weight-medium;
               text-decoration: none;
               color: $color-violet;
@@ -189,6 +260,91 @@
         }
       }
     }
+  }
+}
+
+// <!--Кейсы и отзывы--> //
+.cases{
+  .cases__container{
+    margin-bottom: 100px;
+    .cases__title{
+      font-size: 2.5rem;
+      font-weight: $weight-medium;
+      line-height: 150%;
+      color: $color-violet;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .swiper-slider {
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .cases__wrapp{
+      display: flex;
+      gap: 24px;
+      .cases__photo{
+        height: 100%;
+        border-radius: 8px;
+        margin-right: 24px;
+      }
+      .cases__list{
+        display: flex;
+        flex-direction: row;
+        width: 44%;
+        padding: 20px;
+        background-color: #F5F9FB;
+        border-radius: 8px; 
+        .cases__info{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          &_name{
+            font-size: 1.5rem;
+            font-weight: $weight-medium;
+            line-height: 150%;
+            color: $color-violet;
+            margin-bottom: 20px;
+          }
+          &_subject{
+            padding: 8px 20px;
+            font-size: 1rem;
+            font-weight: $weight-regular;
+            line-height: 150%;
+            color: $color-white;
+            background-color: $color-green;
+            border-radius: 8px;
+          }
+          &_points{
+            display: flex;
+            flex-direction: row;
+            font-size: 1rem;
+            font-weight: $weight-regular;
+            color: $color-violet-secondary;
+            .point{
+              display: flex;
+              flex-direction: column;
+              margin-right: 36px;
+              .point-span{
+                &_grey{
+                  font-weight: 700;
+                  font-size: 3.6rem;
+                  -webkit-text-stroke: 2px $color-grey;
+                  color: transparent;
+                }
+                &_green{
+                  font-weight: 700;
+                  font-size: 3.6rem;
+                  -webkit-text-stroke: 2px $color-green;
+                  color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 
